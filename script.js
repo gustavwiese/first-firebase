@@ -6,7 +6,8 @@ window.addEventListener("load", start);
 
 function start() {
   console.log("JavaScript is running!🥳");
-  getPosts();
+  const data = getPosts();
+  for (const object in data) displayPosts(data[object]);
 }
 
 async function getPosts() {
@@ -25,4 +26,13 @@ function preparePostData(dataObject) {
     postArray.push(post);
   }
   return postArray;
+}
+
+function displayPosts(element) {
+  const htmlObject = /*html*/ `
+  <div>
+  <img src="${element.image}">
+  </div>
+  `;
+  document.querySelector("#posts").insertAdjacentHTML("beforeend", htmlObject);
 }
