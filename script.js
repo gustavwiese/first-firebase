@@ -4,9 +4,9 @@ const endpoint = "https://first-firebase-21c4d-default-rtdb.europe-west1.firebas
 
 window.addEventListener("load", start);
 
-function start() {
+async function start() {
   console.log("JavaScript is running!🥳");
-  const data = getPosts();
+  const data = await getPosts();
   for (const object in data) displayPosts(data[object]);
 }
 
@@ -31,6 +31,7 @@ function preparePostData(dataObject) {
 function displayPosts(element) {
   const htmlObject = /*html*/ `
   <div>
+  <h2>${element.title}</h2>
   <img src="${element.image}">
   </div>
   `;
