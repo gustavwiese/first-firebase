@@ -5,14 +5,24 @@ const endpoint = "https://first-firebase-21c4d-default-rtdb.europe-west1.firebas
 window.addEventListener("load", start);
 
 function start() {
-  console.log("JavaScript Kører");
+  console.log("JavaScript is running!🥳");
   getPosts();
 }
 
 async function getPosts() {
   const response = await fetch(`${endpoint}/posts.json`);
   const data = await response.json();
-  console.log(data);
+  const posts = preparePostData(data);
+  console.log(posts);
+  return posts;
 }
 
-
+function preparePostData(dataObject) {
+  const postArray = [];
+  for (const key in dataObject) {
+    const post = dataObject[key];
+    post.id = key;
+    postArray.push(post);
+  }
+  return postArray;
+}
