@@ -10,8 +10,8 @@ img{
   display: grid;
   grid-template-columns: repeat(2, 2fr);
   grid-template-rows: 1fr;
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
+  grid-column-gap: 0.5%;
+  grid-row-gap: 0.5%;
   color: rgb(43, 200, 214);
   
 }
