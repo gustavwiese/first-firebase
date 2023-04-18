@@ -1,11 +1,17 @@
 body{
     background-color: antiquewhite;
 }
+
+img{
+  width: 600px;
+  height: 400px;
+}
 #posts {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 2fr);
   grid-template-rows: 1fr;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   color: rgb(43, 200, 214);
+  
 }
