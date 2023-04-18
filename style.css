@@ -1,11 +1,12 @@
-body{
-    background-color: antiquewhite;
+body {
+  background-color: antiquewhite;
 }
 
-img{
+img {
   width: 500px;
-  height: 400px
+  height: 400px;
 }
+
 #posts {
   display: grid;
   grid-template-columns: repeat(2, 2fr);
@@ -13,5 +14,13 @@ img{
   grid-column-gap: 0.5%;
   grid-row-gap: 0.5%;
   color: rgb(43, 200, 214);
-  
+}
+
+#users{
+ display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0.5%;
+  grid-row-gap: 0.5%;
+
 }
